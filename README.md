@@ -20,7 +20,7 @@ export ENVTYPE
 
 Configure your virtual host in Apache with:
 ```
-SetEnv ENVTYPE local
+SetEnv ENVTYPE production
 ```
 
 ### Optional Configuration
