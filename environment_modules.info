@@ -1,0 +1,4 @@
+name = Environment Modules
+description = Provides facility to auto enable / disable modules based on makefile.
+package = Environment
+core = 7.x
