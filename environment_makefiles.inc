@@ -1,12 +1,12 @@
 <?php
 /**
  * @file
- * environment_modules.inc
+ * environment_makefile.inc
  *
  * Environmentally aware module handling.
  */
 
-namespace Drupal\environment_modules;
+namespace Drupal\environment_makefile;
 use \Exception;
 
 if ( ! defined(ENVIRONMENT) ) {
@@ -48,7 +48,7 @@ function dev_only_modules() {
 
 function is_production() {
   return ENVIRONMENT && in_array(ENVIRONMENT,
-    variable_get('environment_modules_product_environments',
+    variable_get('environment_makefile_product_environments',
       array('production', 'staging')));
 }
 

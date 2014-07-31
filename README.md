@@ -1,4 +1,4 @@
-environment_modules
+#Environment Makefile
 ===================
 
 Provides facility to auto enable / disable modules based on makefile and environments.
@@ -24,10 +24,10 @@ SetEnv ENVTYPE production
 ```
 
 ### Optional Configuration
-To set an alternate set of production environments, use strongarm or $conf array to set the _environment_modules_product_environments_ variable:
+To set an alternate set of production environments, use strongarm or $conf array to set the _environment_makefile_product_environments_ variable:
 
 ```php
-$conf['environment_modules_product_environments'] = array(
+$conf['environment_makefile_product_environments'] = array(
   'prod',
   'stag',
   'test',
@@ -35,7 +35,7 @@ $conf['environment_modules_product_environments'] = array(
 ```
 
 ### Makefile location
-environment_modules assumes your makefile will be located in a makefiles directory adjacent to the Drupal webroot, and named to match the parent directory:
+environment_makefile assumes your makefile will be located in a makefiles directory adjacent to the Drupal webroot, and named to match the parent directory:
 
 ```
 example.com/
@@ -48,7 +48,7 @@ If you would like to specify the full path to your makefile, use strongarm or $c
 
 ## To Use
 
-environment_modules uses an augmented drush make file to manage the enabling and disabling of modules in your Drupal deployment environments.
+environment_makefile uses an augmented drush make file to manage the enabling and disabling of modules in your Drupal deployment environments.
 
 In your makefile, you can specify modules and submodules that should be enabled or disabled by using the following groupings:
 
@@ -76,8 +76,8 @@ dev_only[] = bulk_export
 ```
 
 ## Drush Support
-Drush is the primary means of initiating environment_modules.
+Drush is the primary means of initiating environment_makefile.
 
 ```bash
-drush @alias environment-modules # alias envm
+drush @alias environment-makefile # alias envm
 ```
