@@ -97,3 +97,4 @@ drush @alias environment-makefile # alias envm
 ```
 
 ## License
+GNU GPL version 2 or later
