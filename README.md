@@ -1,6 +1,6 @@
 # Environment Makefile
 
-environment_modules is a Drupal 7 module that provides a facility to auto enable / disable modules based on makefile and environments.
+Environment modules allows you to auto-enable or disable modules based on your site's makefile and environment. This would allow you to specify development modules such as develor production-only modules such as production monitor in one makefile that will be enabled or disabled when you run Drush.
 
 ## Requirements
 - Drupal 7.x
