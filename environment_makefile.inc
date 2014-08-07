@@ -41,11 +41,20 @@ function enable_modules($type = 'enabled') {
 function dev_only_modules() {
   if ( is_production() ) {
     disable_unwanted_modules('dev_only');
-  } else {
+  }
+  else {
     enable_modules('dev_only');
   }
 }
 
+/**
+ * Return true if the module is installed in a production environment.
+ *
+ * Based on environment variable ENVTYPE. Default production values are
+ * production or staging.
+ *
+ * @return boolean TRUE if environment is considered production, else FALSE.
+ */
 function is_production() {
   return ENVIRONMENT && in_array(ENVIRONMENT,
     variable_get('environment_makefile_product_environments',
@@ -84,6 +93,8 @@ function makefile_metadata( $type = 'enabled' ) {
 
 /**
  * Get the location of the site makefile.
+ *
+ * @return string path to your site makefile
  */
 function makefile_location() {
   return variable_get('makefile_path',

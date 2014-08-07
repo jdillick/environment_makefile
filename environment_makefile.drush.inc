@@ -19,6 +19,11 @@ function environment_makefile_drush_command() {
   );
 }
 
+/**
+ * Drush envm command.
+ *
+ * Reverts module to appropriate state for the current environment.
+ */
 function drush_environment_makefile_environment_makefile() {
   module_load_include('inc', 'environment_makefile', 'environment_makefile');
   drush_print(dt('Ensuring only environment appropriate modules are enabled.'));
